@@ -1,7 +1,7 @@
 {
-	"name": "N13",
+	"name": "N69",
 	"description": "Software Development Kit for Quectel GSM Modules",
 	"system": "*",
-	"url": "https://github.com/OS-Q/N13",
+	"url": "https://github.com/OS-Q/N69",
 	"version": "0.6.0"
 }

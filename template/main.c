@@ -1,10 +1,3 @@
-/**
- * @file main.c
- * Sample main file
- * @author Ajay Bhargav
- *
- */
-
 #include <stdio.h>
 #include <unistd.h>
 
