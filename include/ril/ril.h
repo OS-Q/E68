@@ -260,6 +260,20 @@ int ril_urc_attach(const char *keyword, urc_handler_f callback);
  */
 int ril_urc_detach(const char *keyword);
 
+/**
+ * Lock RIL to take exclusive access.
+ * @note ril_lock()/ril_unlock() should be called from same task
+ * @param wait			[in] 1 to wait for RIL to be available, 0 otherwise
+ * @return				0 on success, -EWOULDBLOCK on error or when lock is unavailable
+ */
+int ril_lock(int wait);
+
+/**
+ * Unlock RIL layer
+ * @note ril_lock()/ril_unlock() should be called from same task
+ */
+void ril_unlock(void);
+
 #ifdef __cplusplus
 }
 #endif

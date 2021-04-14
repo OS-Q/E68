@@ -82,6 +82,25 @@ typedef enum
     RIL_SMS_STATUS_TYPE_INVALID = 0xFF
 } Enum_RIL_SMS_StatusType;
 
+typedef enum
+{
+    LIB_SMS_PDU_TYPE_DELIVER = 0x00,
+    LIB_SMS_PDU_TYPE_SUBMIT = 0x01,
+    LIB_SMS_PDU_TYPE_STATUS_REPORT = 0x02,
+    LIB_SMS_PDU_TYPE_RESERVED = 0x03,
+
+    LIB_SMS_PDU_TYPE_INVALID = 0xFF,
+} LIB_SMS_PDUTypeEnum;
+
+typedef enum
+{
+    LIB_SMS_DCS_ALPHA_DEFAULT = 0,
+    LIB_SMS_DCS_ALPHA_8BIT_DATA = 1,
+    LIB_SMS_DCS_ALPHA_UCS2 = 2,
+
+    LIB_SMS_DCS_ALPHA_INVALID = 0xFF
+} LIB_SMS_DCSAlphaEnum;
+
 /***********************************************************************
  * STRUCT TYPE DEFINITIONS
 ************************************************************************/
@@ -95,7 +114,7 @@ typedef struct
 
 typedef struct
 {
-    bool conPres; //FALSE: This is a normal SMS. TRUE: This is a concatenate SMS
+    u8 conPres; //FALSE: This is a normal SMS. TRUE: This is a concatenate SMS
     ST_RIL_SMS_Con con;
 } ST_RIL_SMS_SendExt;
 
@@ -105,7 +124,7 @@ typedef struct
     char oa[RIL_SMS_PHONE_NUMBER_MAX_LEN];
     char scts[RIL_SMS_TIME_STAMP_STR_MAX_LEN];
 
-    bool conPres; //FALSE: This is a normal SMS. TRUE: This is a concatenate SMS
+    u8 conPres; //FALSE: This is a normal SMS. TRUE: This is a concatenate SMS
     ST_RIL_SMS_Con con;
 
     u8 data[RIL_SMS_TEXT_DATA_MAX_LEN];
@@ -117,7 +136,7 @@ typedef struct
     u8 alpha; //It's value is same as 'LIB_SMS_DCSAlphaEnum'
     char da[RIL_SMS_PHONE_NUMBER_MAX_LEN];
 
-    bool conPres; //FALSE: This is a normal SMS. TRUE: This is a concatenate SMS
+    u8 conPres; //FALSE: This is a normal SMS. TRUE: This is a concatenate SMS
     ST_RIL_SMS_Con con;
 
     u8 data[RIL_SMS_TEXT_DATA_MAX_LEN];
