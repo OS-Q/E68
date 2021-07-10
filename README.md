@@ -1,6 +1,12 @@
-# [F632](https://github.com/OS-Q/F632)
+# LOGICROM SDK
 
-[![sites](http://182.61.61.133/link/resources/OSQ.png)](http://www.OS-Q.com)
+Software development kit for LOGICROM Platform
 
-### [简介](https://github.com/OS-Q/F632/wiki)
+[![Documentation Status](https://readthedocs.org/projects/logicromsdk/badge/?version=latest)](https://docs.logicrom.com)
+[![Github Issues](https://img.shields.io/github/issues/waybyte/logicromsdk.svg)](http://github.com/waybyte/logicromsdk/issues)
+[![Github Releases](https://img.shields.io/github/release/waybyte/logicromsdk.svg)](https://github.com/waybyte/logicromsdk/releases)
 
+
+## Installation Guide
+ - [PlatformIO IDE](https://github.com/waybyte/logicromsdk/blob/master/docs/book/quick_start.rst#platformio-ide)
+ - [Arduino IDE](https://github.com/waybyte/logicromsdk/blob/master/docs/book/quick_start.rst#arduino-ide)
